@@ -1,0 +1,23 @@
+body {
+    /*font-family: 'Qwigley', cursive;*/
+    font-family: 'Italianno', cursive;
+    font-size: x-large;
+}
+
+#promo, .sec3 {
+    background-image: url("../images/bk4.png");
+    /*color: white;*/
+}
+
+#promo .jumbotron {
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.sec2, .sec4 {
+    background-image: url("../images/bk2.gif");
+}
+
+h2, h3 {
+    color: white;
+}
