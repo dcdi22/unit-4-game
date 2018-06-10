@@ -38,7 +38,6 @@ function newGame() {
 
   // Make Sure to write back to DOM
   $("#totalScore").text(totalScore);
-  gemClick();
 }
 // newButton onclick
 newGameButton.on("click", newGame);
@@ -48,22 +47,22 @@ newGameButton.on("click", newGame);
 function win() {
   wins++;
   $("#wins").text(wins);
-  alert("you win!");
+  alert("You won, press 'start' to play again");
   gameRunning = false;
+  console.log(gameRunning);
 }
 // lose function
 function lose() {
   losses++;
   $("#losses").text(losses);
-  alert("what a loser")
+  alert("You lost, press 'start' to play again")
   gameRunning = false;
+  console.log(gameRunning);
 }
 
-
-
-function gemClick() {
-  // gem1 click
-  $("#gem1").on("click", function () {
+// gem1 click
+$("#gem1").on("click", function () {
+  if (gameRunning) {
     totalScore += gem1;
     $("#totalScore").text(totalScore);
     if (winningNum == totalScore) {
@@ -72,9 +71,11 @@ function gemClick() {
     else if (totalScore > winningNum) {
       lose();
     }
-  });
-  // gem2 click
-  $("#gem2").on("click", function () {
+  }
+});
+// gem2 click
+$("#gem2").on("click", function () {
+  if (gameRunning) {
     totalScore += gem2;
     $("#totalScore").text(totalScore);
     if (winningNum == totalScore) {
@@ -83,9 +84,11 @@ function gemClick() {
     else if (totalScore > winningNum) {
       lose();
     }
-  });
-  // gem3 click
-  $("#gem3").on("click", function () {
+  }
+});
+// gem3 click
+$("#gem3").on("click", function () {
+  if (gameRunning) {
     totalScore += gem3;
     $("#totalScore").text(totalScore);
     if (winningNum == totalScore) {
@@ -94,9 +97,11 @@ function gemClick() {
     else if (totalScore > winningNum) {
       lose();
     }
-  });
-  // gem4 click
-  $("#gem4").on("click", function () {
+  }
+});
+// gem4 click
+$("#gem4").on("click", function () {
+  if (gameRunning) {
     totalScore += gem4;
     $("#totalScore").text(totalScore);
     if (winningNum == totalScore) {
@@ -105,6 +110,6 @@ function gemClick() {
     else if (totalScore > winningNum) {
       lose();
     }
-  });
-};
+  }
+});
 
